@@ -1,0 +1,101 @@
+git init
+
+Initializes a new Git repository in the current directory.
+
+This command is used when you're starting a new project or want to turn an existing folder into a Git repository.
+
+git add .
+
+Adds all files in the current directory and subdirectories to the staging area for the next commit.
+
+The . means "everything" in the current directory.
+
+git config --global user.name "Your Name"
+
+Sets your Git username globally for all repositories on your machine.
+
+This command ensures Git knows who you are when committing changes.
+
+git config --global user.email "you@example.com"
+
+Sets your Git email address globally for all repositories.
+
+Your email is associated with your commits and helps identify you as the author.
+
+git branch
+
+Lists all the branches in the current repository.
+
+It shows which branch you’re currently working on.
+
+git checkout -b main
+
+Creates a new branch called main and switches to it.
+
+This is used when you want to create a new branch and start working on it.
+
+git status
+
+Shows the status of your current repository, including which files are staged, unstaged, or untracked.
+
+It’s useful to see which files need to be committed or added.
+
+git commit -m "Initial commit"
+
+Commits changes in the staging area to the local repository with a message.
+
+The -m flag is followed by a commit message that describes the changes made.
+
+git remote add origin https://github.com/LegendCoderDev505/Type-and-Writer-Lang
+
+Adds a remote repository to link your local Git repository to a GitHub repository.
+
+This command connects your local repository to your remote repository on GitHub.
+
+git push -u origin main
+
+Pushes the local main branch to the remote repository (origin is the default name for the remote repository).
+
+The -u flag sets the upstream branch, meaning future git push and git pull commands will automatically target this remote branch.
+
+git pull origin main --allow-unrelated-histories
+
+Pulls changes from the remote repository (in this case, main) and merges them into your local repository.
+
+The --allow-unrelated-histories flag is used when you have two completely different histories, like when the repository was created locally and remotely separately.
+
+git commit -m "Merge remote-tracking branch 'origin/main'"
+
+After pulling changes and resolving any conflicts, this commits the merge from the remote main branch.
+
+It's the default commit message that Git suggests for merging changes.
+
+git push origin main
+
+Pushes your local main branch changes to the remote repository after a merge.
+
+This syncs your local changes with GitHub.
+
+git branch --list
+
+Lists all branches in the repository.
+
+It’s another way to confirm which branches are available.
+
+git config --global core.autocrlf true
+
+Configures Git to handle line endings between Windows and Linux systems.
+
+true tells Git to automatically convert CRLF line endings to LF when committing files to the repository.
+
+git pull origin main
+
+Pulls the latest changes from the main branch of the remote repository.
+
+git checkout main
+
+Switches to the main branch from your current branch.
+
+git push origin main (after resolving merge)
+
+Pushes your changes to the remote repository after the merge has been completed.

@@ -1,0 +1,22 @@
+{
+  "name": "typelang",
+  "version": "0.1.5",
+  "description": "The fast Calculator Alpha Version with Basic and Haskell functions",
+  "main": "/type/dist/index.js",
+  "scripts": {
+    "test": "tls "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LegendCoderDev505/Type-and-Writer-Lang.git#main"
+  },
+  "keywords": [
+    "let"
+  ],
+  "author": "Legend Coder Dev 505",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LegendCoderDev505/Type-and-Writer-Lang/issues"
+  },
+  "homepage": "https://github.com/LegendCoderDev505/Type-and-Writer-Lang/tree/main#readme"
+}

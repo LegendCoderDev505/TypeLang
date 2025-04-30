@@ -1,0 +1,42 @@
+/ = done
+* = progress
+\ = decline
+
+Component (LEXER): /
+function open_file
+function read_file
+function tokenize_file
+function tokens
+function lexing
+
+Component (AST Tree): /
+function evaluate_tokens
+function evaluate_operator
+function binary_operator
+function ast_configure
+function print_ast
+
+Component (Declarifications):
+if it does :
+`
+Evaluating line: let x = 10
+Assignment: [object Object] = [object Object]
+
+Evaluating line: 10 + x == 20
+Operator: +
+Number: 10
+Operator: ==
+Identifier: 10
+Number: 20
+`
+it changes to 
+`
+Evaluating line: let x = 10
+Assignment : [object Object] = [object Object]
+
+Evaluating line: 10 + x == 20
+ifxInt
+1 ( True )
+`
+
+

@@ -1,0 +1,60 @@
+# BASIC
+
+let
+data
+read
+restore
+dim
+if .... then .... {else}
+for ..... to .... {step} .... next
+while ... wend
+repeat ... until
+do ... loop {while or until}
+goto
+gosub ... return
+on ... goto/gosub
+def fn
+
+# Input and output
+
+list
+print
+Inputtab
+spc
+
+
+# Math lib
+abs
+atn
+cos
+exp
+Inputlog
+rnd
+sin
+sqr
+tan
+
+
+# HASKELL
+Bascially ::
+
+
+# TypeLang
+
+let, const, var, data, dim, type, alias
+if, then, else, elif, for, to, step, next, while, wend, repeat, until, do, loop, goto, gosub, return, on, match, case, otherwise
+def, fn, lambda, where, in, of, module, import
+print, input, inputtab, spc, list, read, restore
+abs, atn, cos, exp, log, rnd, sin, sqr, tan, not, and, or, xor, mod, div
+::, ->, =>, type, newtype, class, instance, deriving, as
+map, fold, filter, compose, id, apply, flip, pure, bind, do
+throw, catch, try, trace, debug
+
+
+Version Alpha :
+let, const, inputtab and input
+let <identfier> <type> = <value>;
+const <identfier>; (saves)
+<identfier> = 10;
+inputtab [field1, 12, 13, 14] {field1, 2, 132} (fieald, 1 , 2 ,3 ,4)
+input("whats your name");
