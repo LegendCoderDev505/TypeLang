@@ -13,7 +13,7 @@ switch (args[0]) {
         }
         else {
             console.log(`Compiling: ${file}`);
-            (0, index_1.main)(file);
+            (0, index_1.compile_file)(file);
         }
         break;
     case '--terminal':
