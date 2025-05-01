@@ -1,9 +1,9 @@
 import {
   evaluate_tokens,
   print_ast,
-  Token,
   optimize_ast,
-  ast_configure
+  Token,
+  evaluate
 } from './ast_tree';
 
 import {
@@ -13,34 +13,57 @@ import {
   infix_to_postfix
 } from './lexer';
 
-// Main script execution
-export function main(file: string): void {
-  const filePath = file;
-  const fullPath = open_file(filePath);
+
+
+// Global symbol table (context)
+const context: Record<string, number> = {};
+
+function process_code(content: string): void {
+  if (content.trim() === '') return; // Skip empty lines
+
+  // console.log(`\nEvaluating line: ${content}`);
+
+  try {
+    const tokens = tokenize_file(content.trim());         // Tokenize input
+    const postfix = infix_to_postfix(tokens);             // Convert to postfix
+    const ast = evaluate_tokens(postfix);                 // Generate AST
+    const optimized = optimize_ast(ast);                  // Optimize AST
+
+    print_ast(optimized);                                 // Print AST tree
+
+    const result = evaluate(optimized, context);      // Evaluate with context
+
+    if (optimized.type !== "Assignment") {
+      console.log(`Result: ${result}`);
+    }
+
+  } catch (err: unknown) {
+    handle_error(err);
+  }
+}
+
+// Function to handle errors in the code
+function handle_error(err: unknown): void {
+  if (err instanceof SyntaxError) {
+    console.error('Syntax Error:', err.message);
+  } else if (err instanceof Error) {
+    console.error('Error:', err.message);
+  } else {
+    console.error('Unexpected Error:', err);
+  }
+}
+
+// Main function to compile code from a file
+export function compile_file(file: string): void {
+  const fullPath = open_file(file);
   const code = read_file(fullPath);
 
   const lines = code.trim().split(/\r?\n/);
-
-  for (const line of lines) {
-    if (line.trim() === '') continue; // skip empty lines
-
-    console.log(`\nEvaluating line: ${line}`);
-    
-    try {
-      // Use `line.trim()` directly in the function
-      const tokens = tokenize_file(line.trim()); // This will now check for syntax errors
-      const postfix = infix_to_postfix(tokens);
-      const ast = evaluate_tokens(postfix);  // No need to call ast_configure anymore
-      const optimized = optimize_ast(ast);  // Using optimize_ast directly
-      print_ast(optimized);
-    } catch (err: unknown) {
-      if (err instanceof SyntaxError) {
-          console.error('Syntax Error:', err.message); // Handle custom SyntaxError
-      } else if (err instanceof Error) {
-          console.error('Error:', err.message); // Handle other types of errors
-      } else {
-          console.error('Unexpected Error:', err);
-      }
-    }
-  }
+  lines.forEach(process_code); // Process each line in the file
 }
+
+// Function to compile individual commands (used in REPL or command-line context)
+export function compile_line(commands: string[]): void {
+  commands.forEach(process_code); // Process each command in the list
+}
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { terminal_on } from './terminal';
-import { main } from './index';
+import { compile_file } from './index';
 import { initProject } from './init';
 
 const args = process.argv.slice(2);
@@ -12,7 +12,7 @@ switch (args[0]) {
       console.error("Error: No file specified.");
     } else {
     console.log(`Compiling: ${file}`);
-    main(file);
+    compile_file(file);
     }
     break;
 
