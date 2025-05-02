@@ -12,7 +12,7 @@ exports.optimize_ast = optimize_ast;
 const variableStoreage = {};
 function evaluate(ast, context) {
     if (ast.type === "Number") {
-        return ast.value;
+        return Number(ast.value);
     }
     else if (ast.type === "Identifier") {
         if (context[ast.value] === undefined) {

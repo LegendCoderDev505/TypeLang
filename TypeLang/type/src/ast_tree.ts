@@ -6,7 +6,7 @@ const variableStoreage: { [key: string]: { value: string | number | boolean, typ
 
 export function evaluate(ast: ASTNode, context: Record<string, number>): number {
   if (ast.type === "Number") {
-    return ast.value;
+    return Number(ast.value);
   } else if (ast.type === "Identifier") {
     if (context[ast.value] === undefined) {
       throw new Error(`Undefined variable: ${ast.value}`);

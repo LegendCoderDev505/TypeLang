@@ -8,7 +8,10 @@
   },
   "scripts": {
     "build": "tsc",
-    "pkg": "npm run build && pkg type/dist/tls.js --out-path build",
+    "pkg": "npm run build; npm run pkg:win; npm run pkg:linux; npm run pkg:mac",
+    "pkg:win": "pkg type/dist/tls.js --targets node18-win-x64 --output windows/typelang.exe",
+    "pkg:linux": "pkg type/dist/tls.js --targets node18-linux-x64 --output linux/typelang",
+    "pkg:mac": "pkg type/dist/tls.js --targets node18-macos-x64 --output macos/typelang",
     "test": "node type/dist/tls.js",
     "start": "node type/dist/tls.js"
   },

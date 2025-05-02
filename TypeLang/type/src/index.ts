@@ -28,7 +28,7 @@ function process_code(content: string): void {
     const postfix = infix_to_postfix(tokens);             // Convert to postfix
     const ast = evaluate_tokens(postfix);                 // Generate AST
     const optimized = optimize_ast(ast);                  // Optimize AST
-    console.log(ast); // debug
+    // console.log(ast); // debug
     print_ast(optimized);                                 // Print AST tree
 
     const result = evaluate(optimized, context);      // Evaluate with context
