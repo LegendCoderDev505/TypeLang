@@ -10,7 +10,7 @@ TypeLang blends the clarity of **BASIC** with the functional elegance of **Haske
 ![Language](https://img.shields.io/badge/language-TypeScript-blue)
 ![Package](https://img.shields.io/badge/AMP-supported-red)
 ![Download](https://img.shields.io/badge/Download-pending-red)
-![Discord](https://img.shields.io/badge/Discord-Link)
+![Discord](https://img.shields.io/badge/Discord-Link-purple)
 
 ---
 
@@ -45,3 +45,5 @@ amp install typelang  # (coming soon)
 | **Body**     | 1.2.6   | Alpha    | v1.2.6        | 🛠️ Fixed `let` logic, added more evaluations |
 
 > ✅ You can view the detailed changelog in [`changes.txt`](./changes.txt)
+> ✅ Discord Community : https://discord.gg/E2SyCK4B7V
+> ✅ Contribute if you want
