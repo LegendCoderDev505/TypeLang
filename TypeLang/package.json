@@ -1,22 +1,44 @@
 {
   "name": "typelang",
-  "version": "0.1.5",
+  "version": "1.2.5",
   "description": "The fast Calculator Alpha Version with Basic and Haskell functions",
-  "main": "/type/dist/index.js",
+  "main": "type/dist/tls.js",
+  "bin": {
+    "tls": "type/dist/tls.js"
+  },
   "scripts": {
-    "test": "tls "
+    "build": "tsc",
+    "pkg": "npm run build && pkg type/dist/tls.js --out-path build",
+    "test": "node type/dist/tls.js",
+    "start": "node type/dist/tls.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LegendCoderDev505/Type-and-Writer-Lang.git#main"
+    "url": "git+https://github.com/LegendCoderDev505/TypeLang.git"
   },
-  "keywords": [
-    "let"
-  ],
+  "keywords": ["calculator", "typescript", "haskell", "alpha", "typelang"],
   "author": "Legend Coder Dev 505",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LegendCoderDev505/Type-and-Writer-Lang/issues"
+    "url": "https://github.com/LegendCoderDev505/TypeLang/issues"
   },
-  "homepage": "https://github.com/LegendCoderDev505/Type-and-Writer-Lang/tree/main#readme"
+  "homepage": "https://github.com/LegendCoderDev505/TypeLang#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "pkg": "^5.8.0",
+    "typescript": "^5.8.3"
+  },
+  "pkg": {
+    "scripts": {
+      "start": "node type/dist/tls.js"
+    },
+    "targets": [
+      "node14-linux-x64",
+      "node14-win-x64",
+      "node14-macos-x64"
+    ]
+  }
 }
