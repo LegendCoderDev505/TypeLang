@@ -10,6 +10,7 @@ TypeLang blends the clarity of **BASIC** with the functional elegance of **Haske
 ![Language](https://img.shields.io/badge/language-TypeScript-blue)
 ![Package](https://img.shields.io/badge/AMP-supported-red)
 ![Download](https://img.shields.io/badge/Download-pending-red)
+![Discord](https://img.shields.io/badge/Discord-Link)
 
 ---
 
