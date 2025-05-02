@@ -15,6 +15,7 @@ function process_code(content) {
         const postfix = (0, lexer_1.infix_to_postfix)(tokens); // Convert to postfix
         const ast = (0, ast_tree_1.evaluate_tokens)(postfix); // Generate AST
         const optimized = (0, ast_tree_1.optimize_ast)(ast); // Optimize AST
+        console.log(ast); // debug
         (0, ast_tree_1.print_ast)(optimized); // Print AST tree
         const result = (0, ast_tree_1.evaluate)(optimized, context); // Evaluate with context
         if (optimized.type !== "Assignment") {

@@ -1,1 +1,2 @@
-Released of TypeLang - Alpha - Typer - version 1.2.5
+Released of TypeLang - Alpha - Typer - version 1.2.5 Added 'let' keyword
+Released of TypeLang - Alpha - Body - version 1.2.6 Fixed 'let' Keyword added more Evaluations

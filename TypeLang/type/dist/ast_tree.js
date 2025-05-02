@@ -11,37 +11,47 @@ exports.optimize_ast = optimize_ast;
 // Variable storage structure to store variable names, values, and types
 const variableStoreage = {};
 function evaluate(ast, context) {
-    switch (ast.type) {
-        case "Number":
-            return Number(ast.value);
-        case "Identifier":
-            if (ast.value in context) {
-                return context[ast.value]; // Use stored value
-            }
-            else {
-                throw new Error(`Undefined variable: ${ast.value}`);
-            }
-        case "Operator":
-            const left = evaluate(ast.left, context);
-            const right = evaluate(ast.right, context);
-            switch (ast.value) {
-                case "+": return left + right;
-                case "-": return left - right;
-                case "*": return left * right;
-                case "/": return left / right;
-                default: throw new Error(`Unknown operator: ${ast.value}`);
-            }
-        case "Assignment":
-            if (ast.left.type === "Identifier") {
-                const value = evaluate(ast.right, context);
-                context[ast.left.value] = value; // Store in symbol table
-                return value;
-            }
-            else {
-                throw new Error("Invalid assignment target");
-            }
-        default:
-            throw new Error(`Unknown AST node type: ${ast.type}`);
+    if (ast.type === "Number") {
+        return ast.value;
+    }
+    else if (ast.type === "Identifier") {
+        if (context[ast.value] === undefined) {
+            throw new Error(`Undefined variable: ${ast.value}`);
+        }
+        return context[ast.value];
+    }
+    else if (ast.type === "Operator") {
+        const left = evaluate(ast.left, context);
+        const right = evaluate(ast.right, context);
+        switch (ast.value) {
+            case "+": return left + right;
+            case "-": return left - right;
+            case "*": return left * right;
+            case "/": return left / right;
+            default:
+                throw new Error(`Unknown operator: ${ast.value}`);
+        }
+    }
+    else if (ast.type === "Assignment") {
+        const varName = ast.left.value;
+        const value = evaluate(ast.right, context);
+        context[varName] = value;
+        return value;
+    }
+    else if (ast.type === "Comparison") {
+        const left = evaluate(ast.left, context);
+        const right = evaluate(ast.right, context);
+        switch (ast.value) {
+            case "==": return left === right ? 1 : 0;
+            case "!=": return left !== right ? 1 : 0;
+            case ">": return left > right ? 1 : 0;
+            case "<": return left < right ? 1 : 0;
+            default:
+                throw new Error(`Unknown comparison operator: ${ast.value}`);
+        }
+    }
+    else {
+        throw new Error(`Unknown AST node type: ${ast.type}`);
     }
 }
 // This function prints the AST in a readable format

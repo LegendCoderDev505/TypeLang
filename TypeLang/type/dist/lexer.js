@@ -121,7 +121,7 @@ function lexing(code) {
             while (i < code.length && /\d/.test(code[i])) {
                 num += code[i++];
             }
-            tokens.push({ type: 'Number', value: num });
+            tokens.push({ type: 'Number', value: Number(num).toString() }); // keep value as string for consistency
             continue;
         }
         // Identifiers

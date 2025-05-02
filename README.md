@@ -1,34 +1,46 @@
-# <center>TypeLang</center>
+# <center>🌟 TypeLang</center>
 
-A general-purpose programming language designed for **graphics design** and **compiler development**.  
-TypeLang blends the clarity of **BASIC** with the functional power of **Haskell** to create something fresh, elegant, and accessible.
+A general-purpose programming language built for **graphics design** and **compiler development**.  
+TypeLang blends the clarity of **BASIC** with the functional elegance of **Haskell** to create something truly expressive and developer-friendly.
 
 ---
 
-![Version](https://img.shields.io/badge/version-1.2.3-blue)
-![Badge](https://img.shields.io/badge/Use-Typescript-blue)
-![Badge](https://img.shields.io/badge/Use-AMP-red)
-![Badge](https://img.shields.io/badge/To-Download-red)
+![Version](https://img.shields.io/badge/version-1.2.6-blue)
+![Build](https://img.shields.io/badge/stage-Alpha-lightgrey)
+![Language](https://img.shields.io/badge/language-TypeScript-blue)
+![Package](https://img.shields.io/badge/AMP-supported-red)
+![Download](https://img.shields.io/badge/Download-pending-red)
 
 ---
 
 ## 🔥 Why TypeLang?
 
-- Combines the procedural feel of BASIC and the expressive beauty of Haskell.
-- Focused on **designing compilers** and **graphics-based logic**.
-- Built-in REPL and custom AST evaluation engine.
-- Supports custom operators like `!`, `==`, `===`, `::`, and more.
-- Minimal syntax with real power.
-- Perfect for making creative developer tools and experimental apps.
+- 🚀 Combines the **procedural flow** of BASIC with **Haskell-style expressions**.
+- 🛠️ Designed for building **compilers**, **interpreters**, and **graphics tools**.
+- 🧠 Features a built-in **REPL**, custom **AST evaluator**, and lexer support.
+- 💡 Supports unique operators like `!`, `==`, `===`, `::`, and more.
+- ✍️ Minimal syntax with **maximum power** for creators.
+- 🧪 Perfect for **experimental apps**, **dev tools**, and **education**.
 
 ---
 
-## 🚀 Installation
+## 📦 Installation
 
-### ✅ Recommended (Latest via AMP)
+### ✅ Recommended (via AMP)
 
-Install using the AMP package manager to always get the **latest bleeding-edge version**:
+Use the AMP Package Manager to install the bleeding-edge version:
 
 ```bash
-amp install typelang (not ready)
+amp install typelang  # (coming soon)
 ```
+
+---
+
+## 📝 Versions & Updates
+
+| Release Name | Version | Codename | TypeLang Core | Highlights                                   |
+| ------------ | ------- | -------- | ------------- | -------------------------------------------- |
+| **Typer**    | 1.2.5   | Alpha    | v1.2.5        | ➕ Added `let` keyword                       |
+| **Body**     | 1.2.6   | Alpha    | v1.2.6        | 🛠️ Fixed `let` logic, added more evaluations |
+
+> ✅ You can view the detailed changelog in [`changes.txt`](./changes.txt)
