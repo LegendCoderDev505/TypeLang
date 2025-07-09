@@ -39,7 +39,7 @@ switch (args[0]) {
     initProject();
     break;
   case '--version':
-    const version = "Alpha 0.1.5";
+    const version = "Beta 1.2.8";
     const message = "Patch Version : ";
     console.log(message, version + "\n");
     break;

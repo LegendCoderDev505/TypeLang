@@ -1,2 +1,3 @@
 Released of TypeLang - Alpha - Typer - version 1.2.5 Added 'let' keyword
 Released of TypeLang - Alpha - Body - version 1.2.6 Fixed 'let' Keyword added more Evaluations
+Released of TypeLang - Beta - Over the Fence - version 1.2.8 Added "if", "else", "else if", "print", "and" and "or" keywords 
