@@ -5,7 +5,7 @@ TypeLang blends the clarity of **BASIC** with the functional elegance of **Haske
 
 ---
 
-![Version](https://img.shields.io/badge/version-1.2.6-blue)
+![Version](https://img.shields.io/badge/version-1.2.8-blue)
 ![Build](https://img.shields.io/badge/stage-Alpha-lightgrey)
 ![Language](https://img.shields.io/badge/language-TypeScript-blue)
 ![Package](https://img.shields.io/badge/AMP-supported-red)
@@ -43,6 +43,7 @@ amp install typelang  # (coming soon)
 | ------------ | ------- | -------- | ------------- | -------------------------------------------- |
 | **Typer**    | 1.2.5   | Alpha    | v1.2.5        | ➕ Added `let` keyword                       |
 | **Body**     | 1.2.6   | Alpha    | v1.2.6        | 🛠️ Fixed `let` logic, added more evaluations |
+| **Over the Fence**     | 1.2.8  | Beta    | v1.2.8        | Added Control Flow and new keywords  |
 
 > ✅ You can view the detailed changelog in [`changes.txt`](./changes.txt)
 > ✅ Discord Community : https://discord.gg/E2SyCK4B7V
